@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65E2B221191BF06B005B2849 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E2B220191BF06B005B2849 /* Foundation.framework */; };
+		65E2B223191BF06B005B2849 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E2B222191BF06B005B2849 /* CoreGraphics.framework */; };
+		65E2B225191BF06B005B2849 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E2B224191BF06B005B2849 /* UIKit.framework */; };
+		65E2B22B191BF06B005B2849 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65E2B229191BF06B005B2849 /* InfoPlist.strings */; };
+		65E2B22D191BF06B005B2849 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B22C191BF06B005B2849 /* main.m */; };
+		65E2B231191BF06B005B2849 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B230191BF06B005B2849 /* AppDelegate.m */; };
+		65E2B234191BF06B005B2849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E2B232191BF06B005B2849 /* Main.storyboard */; };
+		65E2B237191BF06B005B2849 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B236191BF06B005B2849 /* ViewController.m */; };
+		65E2B239191BF06B005B2849 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65E2B238191BF06B005B2849 /* Images.xcassets */; };
+		65E2B240191BF06B005B2849 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E2B23F191BF06B005B2849 /* XCTest.framework */; };
+		65E2B241191BF06B005B2849 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E2B220191BF06B005B2849 /* Foundation.framework */; };
+		65E2B242191BF06B005B2849 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E2B224191BF06B005B2849 /* UIKit.framework */; };
+		65E2B24A191BF06B005B2849 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65E2B248191BF06B005B2849 /* InfoPlist.strings */; };
+		65E2B24C191BF06B005B2849 /* MVITunesSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B24B191BF06B005B2849 /* MVITunesSearchTests.m */; };
+		65E2B25A191BF09D005B2849 /* MVITunesSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B257191BF09D005B2849 /* MVITunesSearch.m */; };
+		65E2B25B191BF09D005B2849 /* MVITunesSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B259191BF09D005B2849 /* MVITunesSearchResult.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65E2B243191BF06B005B2849 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65E2B215191BF06B005B2849 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65E2B21C191BF06B005B2849;
+			remoteInfo = MVITunesSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		65E2B21D191BF06B005B2849 /* MVITunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVITunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E2B220191BF06B005B2849 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		65E2B222191BF06B005B2849 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		65E2B224191BF06B005B2849 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		65E2B228191BF06B005B2849 /* MVITunesSearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MVITunesSearch-Info.plist"; sourceTree = "<group>"; };
+		65E2B22A191BF06B005B2849 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		65E2B22C191BF06B005B2849 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65E2B22E191BF06B005B2849 /* MVITunesSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVITunesSearch-Prefix.pch"; sourceTree = "<group>"; };
+		65E2B22F191BF06B005B2849 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65E2B230191BF06B005B2849 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65E2B233191BF06B005B2849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65E2B235191BF06B005B2849 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		65E2B236191BF06B005B2849 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		65E2B238191BF06B005B2849 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65E2B23E191BF06B005B2849 /* MVITunesSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVITunesSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E2B23F191BF06B005B2849 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		65E2B247191BF06B005B2849 /* MVITunesSearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MVITunesSearchTests-Info.plist"; sourceTree = "<group>"; };
+		65E2B249191BF06B005B2849 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		65E2B24B191BF06B005B2849 /* MVITunesSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVITunesSearchTests.m; sourceTree = "<group>"; };
+		65E2B256191BF09D005B2849 /* MVITunesSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVITunesSearch.h; sourceTree = "<group>"; };
+		65E2B257191BF09D005B2849 /* MVITunesSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVITunesSearch.m; sourceTree = "<group>"; };
+		65E2B258191BF09D005B2849 /* MVITunesSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVITunesSearchResult.h; sourceTree = "<group>"; };
+		65E2B259191BF09D005B2849 /* MVITunesSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVITunesSearchResult.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65E2B21A191BF06B005B2849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E2B223191BF06B005B2849 /* CoreGraphics.framework in Frameworks */,
+				65E2B225191BF06B005B2849 /* UIKit.framework in Frameworks */,
+				65E2B221191BF06B005B2849 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E2B23B191BF06B005B2849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E2B240191BF06B005B2849 /* XCTest.framework in Frameworks */,
+				65E2B242191BF06B005B2849 /* UIKit.framework in Frameworks */,
+				65E2B241191BF06B005B2849 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65E2B214191BF06B005B2849 = {
+			isa = PBXGroup;
+			children = (
+				65E2B255191BF09D005B2849 /* MVITunesSearchLib */,
+				65E2B226191BF06B005B2849 /* MVITunesSearch */,
+				65E2B245191BF06B005B2849 /* MVITunesSearchTests */,
+				65E2B21F191BF06B005B2849 /* Frameworks */,
+				65E2B21E191BF06B005B2849 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65E2B21E191BF06B005B2849 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65E2B21D191BF06B005B2849 /* MVITunesSearch.app */,
+				65E2B23E191BF06B005B2849 /* MVITunesSearchTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65E2B21F191BF06B005B2849 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65E2B220191BF06B005B2849 /* Foundation.framework */,
+				65E2B222191BF06B005B2849 /* CoreGraphics.framework */,
+				65E2B224191BF06B005B2849 /* UIKit.framework */,
+				65E2B23F191BF06B005B2849 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65E2B226191BF06B005B2849 /* MVITunesSearch */ = {
+			isa = PBXGroup;
+			children = (
+				65E2B22F191BF06B005B2849 /* AppDelegate.h */,
+				65E2B230191BF06B005B2849 /* AppDelegate.m */,
+				65E2B232191BF06B005B2849 /* Main.storyboard */,
+				65E2B235191BF06B005B2849 /* ViewController.h */,
+				65E2B236191BF06B005B2849 /* ViewController.m */,
+				65E2B238191BF06B005B2849 /* Images.xcassets */,
+				65E2B227191BF06B005B2849 /* Supporting Files */,
+			);
+			path = MVITunesSearch;
+			sourceTree = "<group>";
+		};
+		65E2B227191BF06B005B2849 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65E2B228191BF06B005B2849 /* MVITunesSearch-Info.plist */,
+				65E2B229191BF06B005B2849 /* InfoPlist.strings */,
+				65E2B22C191BF06B005B2849 /* main.m */,
+				65E2B22E191BF06B005B2849 /* MVITunesSearch-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65E2B245191BF06B005B2849 /* MVITunesSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				65E2B24B191BF06B005B2849 /* MVITunesSearchTests.m */,
+				65E2B246191BF06B005B2849 /* Supporting Files */,
+			);
+			path = MVITunesSearchTests;
+			sourceTree = "<group>";
+		};
+		65E2B246191BF06B005B2849 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65E2B247191BF06B005B2849 /* MVITunesSearchTests-Info.plist */,
+				65E2B248191BF06B005B2849 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65E2B255191BF09D005B2849 /* MVITunesSearchLib */ = {
+			isa = PBXGroup;
+			children = (
+				65E2B256191BF09D005B2849 /* MVITunesSearch.h */,
+				65E2B257191BF09D005B2849 /* MVITunesSearch.m */,
+				65E2B258191BF09D005B2849 /* MVITunesSearchResult.h */,
+				65E2B259191BF09D005B2849 /* MVITunesSearchResult.m */,
+			);
+			path = MVITunesSearchLib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65E2B21C191BF06B005B2849 /* MVITunesSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E2B24F191BF06B005B2849 /* Build configuration list for PBXNativeTarget "MVITunesSearch" */;
+			buildPhases = (
+				65E2B219191BF06B005B2849 /* Sources */,
+				65E2B21A191BF06B005B2849 /* Frameworks */,
+				65E2B21B191BF06B005B2849 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVITunesSearch;
+			productName = MVITunesSearch;
+			productReference = 65E2B21D191BF06B005B2849 /* MVITunesSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65E2B23D191BF06B005B2849 /* MVITunesSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65E2B252191BF06B005B2849 /* Build configuration list for PBXNativeTarget "MVITunesSearchTests" */;
+			buildPhases = (
+				65E2B23A191BF06B005B2849 /* Sources */,
+				65E2B23B191BF06B005B2849 /* Frameworks */,
+				65E2B23C191BF06B005B2849 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65E2B244191BF06B005B2849 /* PBXTargetDependency */,
+			);
+			name = MVITunesSearchTests;
+			productName = MVITunesSearchTests;
+			productReference = 65E2B23E191BF06B005B2849 /* MVITunesSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65E2B215191BF06B005B2849 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = musevisions;
+				TargetAttributes = {
+					65E2B23D191BF06B005B2849 = {
+						TestTargetID = 65E2B21C191BF06B005B2849;
+					};
+				};
+			};
+			buildConfigurationList = 65E2B218191BF06B005B2849 /* Build configuration list for PBXProject "MVITunesSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65E2B214191BF06B005B2849;
+			productRefGroup = 65E2B21E191BF06B005B2849 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65E2B21C191BF06B005B2849 /* MVITunesSearch */,
+				65E2B23D191BF06B005B2849 /* MVITunesSearchTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65E2B21B191BF06B005B2849 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E2B239191BF06B005B2849 /* Images.xcassets in Resources */,
+				65E2B22B191BF06B005B2849 /* InfoPlist.strings in Resources */,
+				65E2B234191BF06B005B2849 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E2B23C191BF06B005B2849 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E2B24A191BF06B005B2849 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65E2B219191BF06B005B2849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E2B25A191BF09D005B2849 /* MVITunesSearch.m in Sources */,
+				65E2B237191BF06B005B2849 /* ViewController.m in Sources */,
+				65E2B231191BF06B005B2849 /* AppDelegate.m in Sources */,
+				65E2B22D191BF06B005B2849 /* main.m in Sources */,
+				65E2B25B191BF09D005B2849 /* MVITunesSearchResult.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65E2B23A191BF06B005B2849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E2B24C191BF06B005B2849 /* MVITunesSearchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65E2B244191BF06B005B2849 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65E2B21C191BF06B005B2849 /* MVITunesSearch */;
+			targetProxy = 65E2B243191BF06B005B2849 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		65E2B229191BF06B005B2849 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E2B22A191BF06B005B2849 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		65E2B232191BF06B005B2849 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E2B233191BF06B005B2849 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		65E2B248191BF06B005B2849 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65E2B249191BF06B005B2849 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65E2B24D191BF06B005B2849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		65E2B24E191BF06B005B2849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65E2B250191BF06B005B2849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MVITunesSearch/MVITunesSearch-Prefix.pch";
+				INFOPLIST_FILE = "MVITunesSearch/MVITunesSearch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		65E2B251191BF06B005B2849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MVITunesSearch/MVITunesSearch-Prefix.pch";
+				INFOPLIST_FILE = "MVITunesSearch/MVITunesSearch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		65E2B253191BF06B005B2849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MVITunesSearch.app/MVITunesSearch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MVITunesSearch/MVITunesSearch-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MVITunesSearchTests/MVITunesSearchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		65E2B254191BF06B005B2849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MVITunesSearch.app/MVITunesSearch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MVITunesSearch/MVITunesSearch-Prefix.pch";
+				INFOPLIST_FILE = "MVITunesSearchTests/MVITunesSearchTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65E2B218191BF06B005B2849 /* Build configuration list for PBXProject "MVITunesSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E2B24D191BF06B005B2849 /* Debug */,
+				65E2B24E191BF06B005B2849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65E2B24F191BF06B005B2849 /* Build configuration list for PBXNativeTarget "MVITunesSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E2B250191BF06B005B2849 /* Debug */,
+				65E2B251191BF06B005B2849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		65E2B252191BF06B005B2849 /* Build configuration list for PBXNativeTarget "MVITunesSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E2B253191BF06B005B2849 /* Debug */,
+				65E2B254191BF06B005B2849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65E2B215191BF06B005B2849 /* Project object */;
+}
