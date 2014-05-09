@@ -59,7 +59,7 @@ static CGFloat kImageSize = 30.0f;
         }];
     }
     else {
-        NSLog(@"Image already exists: %@", imageURLAddress);
+        //NSLog(@"Image already exists: %@", imageURLAddress);
         [self updateCellAtIndexPath:indexPath withImage:image];
     }
 }
@@ -132,6 +132,7 @@ static CGFloat kImageSize = 30.0f;
         if ([[UIApplication sharedApplication] canOpenURL:url]) {
             [[UIApplication sharedApplication] openURL:url];
         }
+        [self.selectDelegate tableView:self didSelectApp:searchResult atIndexPath:indexPath];
     }
 }
 
@@ -145,5 +146,6 @@ static CGFloat kImageSize = 30.0f;
 - (CGFloat)cellHeight {
     return 44.0f;
 }
+
 
 @end
