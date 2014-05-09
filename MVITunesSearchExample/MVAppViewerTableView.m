@@ -52,9 +52,7 @@ static CGFloat kImageSize = 30.0f;
         [self.imageDownloader downloadImageWithURL:url options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
             [[SDImageCache sharedImageCache] storeImage:image forKey:imageURLAddress];
 
-            [self reloadData];
-            // First time this doesn't work!
-            //[self updateCellAtIndexPath:indexPath withImage:image];
+            [self updateCellAtIndexPath:indexPath withImage:image];
         }];
     }
     else {
@@ -66,11 +64,7 @@ static CGFloat kImageSize = 30.0f;
 - (void)updateCellAtIndexPath:(NSIndexPath *)indexPath withImage:(UIImage *)image {
     UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
     if (cell != nil) {
-        cell.imageView.image = [self thumbnailFromImage:image];
-    }
-    else {
-        NSLog(@"Could not find cell for row %d", indexPath.row);
-        [self reloadData];
+        [self reloadRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 
