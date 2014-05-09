@@ -10,6 +10,8 @@
 
 @interface MVITunesSearch : NSObject
 
++ (instancetype)searchWithArtistID:(NSString *)artistID exludedBundleIDs:(NSArray *)exludedBundleIDs completion:(void(^)(NSArray *searchResults, NSError *error))completionBlock;
+
 - (id)initWithArtistID:(NSString *)artistID exludedBundleIDs:(NSArray *)exludedBundleIDs;
 
 - (void)doSearch:(void(^)(NSArray *searchResults, NSError *error))completionBlock;

@@ -19,6 +19,12 @@ static NSString *kITunesSearchURLFormat = @"https://itunes.apple.com/lookup?id=%
 
 @implementation MVITunesSearch
 
++ (instancetype)searchWithArtistID:(NSString *)artistID exludedBundleIDs:(NSArray *)exludedBundleIDs completion:(void(^)(NSArray *searchResults, NSError *error))completionBlock {
+    MVITunesSearch *search = [[MVITunesSearch alloc] initWithArtistID:artistID exludedBundleIDs:exludedBundleIDs];
+    [search doSearch:completionBlock];
+    return search;
+}
+
 - (id)initWithArtistID:(NSString *)artistID exludedBundleIDs:(NSArray *)exludedBundleIDs {
 
     if (self = [super init]) {
