@@ -30,7 +30,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.tableView searchWithDeveloperId:@"539165502" excludedBundleIDs:nil];
+    [self.tableView searchWithDeveloperId:@"539165502" excludedBundleIDs:nil completion:nil];
 }
 
 @end

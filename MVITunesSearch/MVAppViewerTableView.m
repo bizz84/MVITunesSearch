@@ -19,7 +19,7 @@ static CGFloat kImageSize = 30.0f;
 
 @implementation MVAppViewerTableView
 
-- (void)searchWithDeveloperId:(NSString *)developerId excludedBundleIDs:(NSArray *)excludedBundleIDs {
+- (void)searchWithDeveloperId:(NSString *)developerId excludedBundleIDs:(NSArray *)excludedBundleIDs completion:(void(^)(NSArray *searchResults, NSError *error))completionBlock {
 
     self.delegate = self;
     self.dataSource = self;
@@ -40,6 +40,9 @@ static CGFloat kImageSize = 30.0f;
             //NSLog(@"%@", result);
         }
         [self reloadData];
+
+        if (completionBlock)
+            completionBlock(searchResults, error);
     }];
 }
 
@@ -86,10 +89,11 @@ static CGFloat kImageSize = 30.0f;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.textLabel.font = [UIFont systemFontOfSize:12.0f];
         cell.textLabel.numberOfLines = 0;
+        cell.textLabel.textColor = self.tintColor;
+        cell.backgroundColor = self.backgroundColor;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.imageView.layer.cornerRadius = 5;
         cell.imageView.layer.masksToBounds = YES;
-        cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
-        cell.imageView.image = [UIImage imageNamed:@"placeholderImage60.png"];
     }
     NSUInteger row = (NSUInteger)indexPath.row;
     if (row < self.searchResults.count) {
@@ -132,11 +136,14 @@ static CGFloat kImageSize = 30.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44.0f;
+    return [self cellHeight];
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44.0f;
+    return [self cellHeight];
 }
 
+- (CGFloat)cellHeight {
+    return 44.0f;
+}
 
 @end

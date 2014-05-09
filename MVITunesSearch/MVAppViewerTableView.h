@@ -8,6 +8,8 @@
 
 @interface MVAppViewerTableView : UITableView
 
-- (void)searchWithDeveloperId:(NSString *)developerId excludedBundleIDs:(NSArray *)excludedBundleIDs;
+- (void)searchWithDeveloperId:(NSString *)developerId excludedBundleIDs:(NSArray *)excludedBundleIDs completion:(void(^)(NSArray *searchResults, NSError *error))completionBlock;
+
+@property (readonly) CGFloat cellHeight;
 
 @end
