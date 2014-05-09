@@ -9,6 +9,8 @@
 #import "MVITunesSearchResult.h"
 #import "MVITunesSearch.h"
 
+static CGFloat kImageSize = 30.0f;
+
 @interface MVAppViewerTableView ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSArray *searchResults;
 @property (strong, nonatomic) SDWebImageDownloader *imageDownloader;
@@ -50,8 +52,9 @@
         [self.imageDownloader downloadImageWithURL:url options:SDWebImageDownloaderUseNSURLCache progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
             [[SDImageCache sharedImageCache] storeImage:image forKey:imageURLAddress];
 
+            [self reloadData];
             // First time this doesn't work!
-            [self updateCellAtIndexPath:indexPath withImage:image];
+            //[self updateCellAtIndexPath:indexPath withImage:image];
         }];
     }
     else {
@@ -63,10 +66,11 @@
 - (void)updateCellAtIndexPath:(NSIndexPath *)indexPath withImage:(UIImage *)image {
     UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
     if (cell != nil) {
-        cell.imageView.image = image;
+        cell.imageView.image = [self thumbnailFromImage:image];
     }
     else {
-        //
+        NSLog(@"Could not find cell for row %d", indexPath.row);
+        [self reloadData];
     }
 }
 
@@ -90,7 +94,7 @@
         cell.textLabel.numberOfLines = 0;
         cell.imageView.layer.cornerRadius = 5;
         cell.imageView.layer.masksToBounds = YES;
-        cell.imageView.bounds = CGRectMake(0, 0, 30, 30); // setting bounds not working
+        cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
         cell.imageView.image = [UIImage imageNamed:@"placeholderImage60.png"];
     }
     NSUInteger row = (NSUInteger)indexPath.row;
@@ -98,14 +102,39 @@
         MVITunesSearchResult *searchResult = [self.searchResults objectAtIndex:row];
         cell.textLabel.text = searchResult.appName;
         UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:searchResult.iconArtworkSize60URL];
-        cell.imageView.image = image;
-        cell.imageView.bounds = CGRectMake(0, 0, 30, 30);
+        cell.imageView.image = [self thumbnailFromImage:image];
     }
     return cell;
 }
 
+// Method to resize read image to 60x60 pixels
+- (UIImage *)thumbnailFromImage:(UIImage *)image {
+
+    CGSize size = CGSizeMake(kImageSize, kImageSize);
+    UIGraphicsBeginImageContextWithOptions(size, NO, UIScreen.mainScreen.scale);
+    // draw scaled image into thumbnail context
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *newThumbnail = UIGraphicsGetImageFromCurrentImageContext();
+    // pop the context
+    UIGraphicsEndImageContext();
+    if(newThumbnail == nil) {
+        NSLog(@"could not scale image");
+        return image;
+    }
+    return newThumbnail;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    NSUInteger row = (NSUInteger)indexPath.row;
+    if (row < self.searchResults.count) {
+        MVITunesSearchResult *searchResult = [self.searchResults objectAtIndex:row];
+
+        NSURL *url = [NSURL URLWithString:searchResult.appURL];
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
