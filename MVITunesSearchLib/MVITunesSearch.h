@@ -12,7 +12,7 @@
 
 - (id)initWithArtistID:(NSString *)artistID exludedBundleIDs:(NSArray *)exludedBundleIDs;
 
-- (void)doSearch;
+- (void)doSearch:(void(^)(NSArray *searchResults, NSError *error))completionBlock;
 
 @property (strong, nonatomic, readonly) NSMutableArray *searchResults;
 

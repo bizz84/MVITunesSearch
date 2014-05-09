@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MVITunesSearch.h"
+#import "MVITunesSearchResult.h"
 
 @interface ViewController ()
 
@@ -24,6 +26,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    MVITunesSearch *search = [[MVITunesSearch alloc] initWithArtistID:@"539165502" exludedBundleIDs:nil];
+    [search doSearch:^(NSArray *searchResults, NSError *error) {
+
+        for (MVITunesSearchResult *result in searchResults) {
+            //NSLog(@"%@", [result debugDescription]);
+            NSLog(@"%@", result);
+        }
+    }];
 }
 
 @end

@@ -13,4 +13,5 @@
 @property (copy, nonatomic) NSString *iconArtworkSize60URL;
 @property (copy, nonatomic) NSString *iconArtworkSize100URL;
 @property (copy, nonatomic) NSString *iconArtworkSize512URL;
+@property (copy, nonatomic) NSDictionary *result;
 @end

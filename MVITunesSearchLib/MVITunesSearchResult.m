@@ -17,4 +17,9 @@
         self.appId, self.appURL, self.appBundleId, self.iconArtworkSize60URL, self.iconArtworkSize100URL, self.iconArtworkSize512URL];
 }
 
+- (NSString *)debugDescription
+{
+    return [NSString stringWithFormat:@"%@", self.result];
+}
+
 @end

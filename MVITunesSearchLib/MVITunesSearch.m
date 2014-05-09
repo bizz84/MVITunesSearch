@@ -30,7 +30,7 @@ static NSString *kITunesSearchURLFormat = @"https://itunes.apple.com/lookup?id=%
     return self;
 }
 
-- (void)doSearch {
+- (void)doSearch:(void(^)(NSArray *searchResults, NSError *error))completionBlock {
 
     NSString *searchAddress = [NSString stringWithFormat:kITunesSearchURLFormat, self.artistID];
     NSURL *searchURL = [NSURL URLWithString:searchAddress];
@@ -40,25 +40,32 @@ static NSString *kITunesSearchURLFormat = @"https://itunes.apple.com/lookup?id=%
             completionHandler:^(NSData *data,
                     NSURLResponse *response,
                     NSError *error) {
-                // handle response
 
-                [self parseData:data];
+                // handle response
+                if (error == nil) {
+                    [self parseData:data completion:completionBlock];
+                }
+                else {
+                    completionBlock(nil, error);
+                }
+
             }] resume];
 }
 
-- (BOOL)parseData:(NSData *)data {
+- (void)parseData:(NSData *)data completion:(void(^)(NSArray *searchResults, NSError *error))completionBlock {
     NSError *error = nil;
     NSDictionary *contents = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     if (error != nil) {
-        NSLog(@"Error parsing JSON.");
-        return NO;
+        completionBlock(nil, error);
+        return;
     }
     NSArray *results = contents[@"results"];
-    if (results == nil)
-        return NO;
+    if (results == nil) {
+        completionBlock(@[], nil);
+        return;
+    }
 
-    // Clear
-    [self.searchResults removeAllObjects];
+    NSMutableArray *searchResults = [NSMutableArray new];
 
     for (NSDictionary *result in results) {
 
@@ -70,11 +77,10 @@ static NSString *kITunesSearchURLFormat = @"https://itunes.apple.com/lookup?id=%
 
         if (!shouldExclude) {
 
-            [self processResult:result];
+            [searchResults addObject:[self processResult:result]];
         }
-
     }
-    return YES;
+    completionBlock(searchResults, nil);
 }
 
 - (BOOL)shouldExcludeBundleId:(NSString *)bundleId {
@@ -93,19 +99,18 @@ static NSString *kITunesSearchURLFormat = @"https://itunes.apple.com/lookup?id=%
     return result[artworkKey];
 }
 
-- (void)processResult:(NSDictionary *)result {
+- (MVITunesSearchResult *)processResult:(NSDictionary *)result {
 
     MVITunesSearchResult *searchResult = [MVITunesSearchResult new];
+    searchResult.result = result;
+    // Derived values
     searchResult.appBundleId = result[@"bundleId"];
     searchResult.appId = result[@"trackId"];
     searchResult.appURL = result[@"trackViewUrl"];
     searchResult.iconArtworkSize60URL = [self artworkURLForResult:result withSize:@"60"];
     searchResult.iconArtworkSize100URL = [self artworkURLForResult:result withSize:@"100"];
     searchResult.iconArtworkSize512URL = [self artworkURLForResult:result withSize:@"512"];
-
-    [self.searchResults addObject:searchResult];
-
-    NSLog(@"%@", searchResult);
+    return searchResult;
 }
 
 @end
