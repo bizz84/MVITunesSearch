@@ -9,35 +9,28 @@
 #import "ViewController.h"
 #import "MVITunesSearch.h"
 #import "MVITunesSearchResult.h"
+#import "SDImageCache.h"
+#import "SDWebImageDownloader.h"
+#import "MVAppViewerTableView.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet MVAppViewerTableView *tableView;
 
 @end
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    MVITunesSearch *search = [[MVITunesSearch alloc] initWithArtistID:@"539165502" exludedBundleIDs:nil];
-    [search doSearch:^(NSArray *searchResults, NSError *error) {
-
-        for (MVITunesSearchResult *result in searchResults) {
-            //NSLog(@"%@", [result debugDescription]);
-            NSLog(@"%@", result);
-        }
-    }];
+    [self.tableView searchWithDeveloperId:@"539165502" excludedBundleIDs:nil];
 }
 
 @end

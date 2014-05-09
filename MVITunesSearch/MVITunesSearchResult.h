@@ -9,6 +9,7 @@
 @interface MVITunesSearchResult : NSObject
 @property (copy, nonatomic) NSString *appBundleId;
 @property (copy, nonatomic) NSString *appId;
+@property (copy, nonatomic) NSString *appName;
 @property (copy, nonatomic) NSString *appURL;
 @property (copy, nonatomic) NSString *iconArtworkSize60URL;
 @property (copy, nonatomic) NSString *iconArtworkSize100URL;

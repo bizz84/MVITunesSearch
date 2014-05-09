@@ -47,13 +47,15 @@ static NSString *kITunesSearchURLFormat = @"https://itunes.apple.com/lookup?id=%
                     NSURLResponse *response,
                     NSError *error) {
 
-                // handle response
-                if (error == nil) {
-                    [self parseData:data completion:completionBlock];
-                }
-                else {
-                    completionBlock(nil, error);
-                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    // handle response
+                    if (error == nil) {
+                        [self parseData:data completion:completionBlock];
+                    }
+                    else {
+                        completionBlock(nil, error);
+                    }
+                });
 
             }] resume];
 }
@@ -112,6 +114,7 @@ static NSString *kITunesSearchURLFormat = @"https://itunes.apple.com/lookup?id=%
     // Derived values
     searchResult.appBundleId = result[@"bundleId"];
     searchResult.appId = result[@"trackId"];
+    searchResult.appName = result[@"trackName"];
     searchResult.appURL = result[@"trackViewUrl"];
     searchResult.iconArtworkSize60URL = [self artworkURLForResult:result withSize:@"60"];
     searchResult.iconArtworkSize100URL = [self artworkURLForResult:result withSize:@"100"];

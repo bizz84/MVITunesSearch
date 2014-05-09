@@ -13,8 +13,8 @@
 
 - (NSString *)description {
 
-    return [NSString stringWithFormat:@"appId: %@\nappURL: %@\nbundle: %@\nartwork URL(60): %@\nartwork URL(100): %@\nartwork URL(512): %@\n\n",
-        self.appId, self.appURL, self.appBundleId, self.iconArtworkSize60URL, self.iconArtworkSize100URL, self.iconArtworkSize512URL];
+    return [NSString stringWithFormat:@"appId: %@\nappURL: %@\nappName: %@\nbundle: %@\nartwork URL(60): %@\nartwork URL(100): %@\nartwork URL(512): %@\n\n",
+        self.appId, self.appURL, self.appName, self.appBundleId, self.iconArtworkSize60URL, self.iconArtworkSize100URL, self.iconArtworkSize512URL];
 }
 
 - (NSString *)debugDescription
