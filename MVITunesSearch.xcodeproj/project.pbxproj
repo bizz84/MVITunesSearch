@@ -24,8 +24,8 @@
 		65E2B27F191CB390005B2849 /* MVITunesSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B27C191CB390005B2849 /* MVITunesSearch.m */; };
 		65E2B280191CB390005B2849 /* MVITunesSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B27E191CB390005B2849 /* MVITunesSearchResult.m */; };
 		65E2B28A191CC78E005B2849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E2B268191CB2E8005B2849 /* Main.storyboard */; };
-		65E2B28C191CD0E4005B2849 /* placeholderImage60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E2B28B191CD0E4005B2849 /* placeholderImage60@2x.png */; };
-		ABC35F2B3F9D2F7CFBE51C98 /* MVAppViewerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC35422C644B488B9386230 /* MVAppViewerTableView.m */; };
+		65E2B290191D0350005B2849 /* MVAppViewerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E2B28E191D0350005B2849 /* MVAppViewerTableView.m */; };
+		65E2B291191D0350005B2849 /* placeholderImage60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65E2B28F191D0350005B2849 /* placeholderImage60@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +63,9 @@
 		65E2B27C191CB390005B2849 /* MVITunesSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVITunesSearch.m; sourceTree = "<group>"; };
 		65E2B27D191CB390005B2849 /* MVITunesSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVITunesSearchResult.h; sourceTree = "<group>"; };
 		65E2B27E191CB390005B2849 /* MVITunesSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVITunesSearchResult.m; sourceTree = "<group>"; };
-		65E2B28B191CD0E4005B2849 /* placeholderImage60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderImage60@2x.png"; sourceTree = "<group>"; };
-		ABC35422C644B488B9386230 /* MVAppViewerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVAppViewerTableView.m; sourceTree = "<group>"; };
-		ABC35F27808D19D303419709 /* MVAppViewerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVAppViewerTableView.h; sourceTree = "<group>"; };
+		65E2B28D191D0350005B2849 /* MVAppViewerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVAppViewerTableView.h; sourceTree = "<group>"; };
+		65E2B28E191D0350005B2849 /* MVAppViewerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVAppViewerTableView.m; sourceTree = "<group>"; };
+		65E2B28F191D0350005B2849 /* placeholderImage60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderImage60@2x.png"; sourceTree = "<group>"; };
 		FD48BAF1987548C2961B08AA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,7 +148,6 @@
 		65E2B265191CB2E8005B2849 /* MVITunesSearchExample */ = {
 			isa = PBXGroup;
 			children = (
-				65E2B28B191CD0E4005B2849 /* placeholderImage60@2x.png */,
 				65E2B279191CB2FE005B2849 /* Supporting Files */,
 				65E2B266191CB2E8005B2849 /* AppDelegate.h */,
 				65E2B267191CB2E8005B2849 /* AppDelegate.m */,
@@ -156,8 +155,6 @@
 				65E2B26C191CB2E8005B2849 /* Images.xcassets */,
 				65E2B270191CB2E8005B2849 /* ViewController.h */,
 				65E2B271191CB2E8005B2849 /* ViewController.m */,
-				ABC35422C644B488B9386230 /* MVAppViewerTableView.m */,
-				ABC35F27808D19D303419709 /* MVAppViewerTableView.h */,
 			);
 			path = MVITunesSearchExample;
 			sourceTree = "<group>";
@@ -176,6 +173,9 @@
 		65E2B27A191CB390005B2849 /* MVITunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				65E2B28D191D0350005B2849 /* MVAppViewerTableView.h */,
+				65E2B28E191D0350005B2849 /* MVAppViewerTableView.m */,
+				65E2B28F191D0350005B2849 /* placeholderImage60@2x.png */,
 				65E2B27B191CB390005B2849 /* MVITunesSearch.h */,
 				65E2B27C191CB390005B2849 /* MVITunesSearch.m */,
 				65E2B27D191CB390005B2849 /* MVITunesSearchResult.h */,
@@ -263,8 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E2B28A191CC78E005B2849 /* Main.storyboard in Resources */,
-				65E2B28C191CD0E4005B2849 /* placeholderImage60@2x.png in Resources */,
 				65E2B277191CB2E8005B2849 /* MVITunesSearch-Info.plist in Resources */,
+				65E2B291191D0350005B2849 /* placeholderImage60@2x.png in Resources */,
 				65E2B275191CB2E8005B2849 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,12 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E2B290191D0350005B2849 /* MVAppViewerTableView.m in Sources */,
 				65E2B27F191CB390005B2849 /* MVITunesSearch.m in Sources */,
 				65E2B278191CB2E8005B2849 /* ViewController.m in Sources */,
 				65E2B272191CB2E8005B2849 /* AppDelegate.m in Sources */,
 				65E2B276191CB2E8005B2849 /* main.m in Sources */,
 				65E2B280191CB390005B2849 /* MVITunesSearchResult.m in Sources */,
-				ABC35F2B3F9D2F7CFBE51C98 /* MVAppViewerTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

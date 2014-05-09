@@ -15,6 +15,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'MVITunesSearch/*.{h,m}'
 
+  s.dependency 'SDWebImage'
+
   s.screenshots  = ["https://github.com/bizz84/MVITunesSearch/raw/master/preview.png"]
 
   s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
