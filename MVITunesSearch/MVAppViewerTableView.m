@@ -91,9 +91,18 @@ static CGFloat kImageSize = 30.0f;
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.textColor = self.tintColor;
         cell.backgroundColor = self.backgroundColor;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.imageView.layer.cornerRadius = 5;
         cell.imageView.layer.masksToBounds = YES;
+
+        if (self.selectedBackgroundColor) {
+            UIView *customColorView = [[UIView alloc] init];
+            customColorView.backgroundColor = self.selectedBackgroundColor;
+            cell.selectedBackgroundView =  customColorView;
+        }
+        else {
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+
     }
     NSUInteger row = (NSUInteger)indexPath.row;
     if (row < self.searchResults.count) {

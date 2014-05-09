@@ -16,6 +16,7 @@
 
 - (void)searchWithDeveloperId:(NSString *)developerId excludedBundleIDs:(NSArray *)excludedBundleIDs completion:(void(^)(NSArray *searchResults, NSError *error))completionBlock;
 
+@property (strong, nonatomic) UIColor *selectedBackgroundColor;
 @property (readonly) CGFloat cellHeight;
 @property(strong, nonatomic) id<MVAppViewerTableViewSelectDelegate> selectDelegate;
 @end
