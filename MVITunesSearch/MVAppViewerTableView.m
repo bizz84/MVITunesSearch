@@ -67,7 +67,7 @@ static CGFloat kImageSize = 30.0f;
 - (void)updateCellAtIndexPath:(NSIndexPath *)indexPath withImage:(UIImage *)image {
     UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
     if (cell != nil) {
-        [self reloadRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
+        cell.imageView.image = [self thumbnailFromImage:image];
     }
 }
 
