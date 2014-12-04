@@ -35,7 +35,7 @@ A sample application demonstrating the usage MVITunesSearch is included.
 
 Preview
 -------------------------------------------------------
-
+![MVITunesSearch preview](https://github.com/bizz84/MVITunesSearch/raw/master/preview.png "MVITunesSearch preview")
 
 License
 -------------------------------------------------------
